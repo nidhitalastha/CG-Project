@@ -15,7 +15,6 @@ unsigned int maxBullet = 10;
 unsigned int maxBalloon = 30;
 GLfloat width = 800.0, height = 700.0;
 unsigned int missedBalloon;
-unsigned int totalScored = 0;
 
 // declaration for the baalloonBurt function
 void balloonBurst(int i);
@@ -111,6 +110,7 @@ public:
 				//std::cout << "test";
 				animCalled = true;
 			}
+			// texture binding for bursting the balloon
 			glEnable(GL_TEXTURE_2D);
 			glBindTexture(GL_TEXTURE_2D, balloonTex[z]);
 			glBegin(GL_POLYGON);
@@ -142,7 +142,7 @@ void genBalloon(int x) {
 	glutTimerFunc(2000, genBalloon, 0);
 }
 
-// texture to burst the balloon function
+// function to burst the balloon 
 void balloonBurst(int i)
 {
 	for (auto& i : B) {
@@ -222,7 +222,6 @@ void display() {
 					for (int i = 0; i < B.size(); i++) { 
 						if (B[i].bx<b[x].bulletx + 5 && B[i].bx + 30>b[x].bulletx&& B[i].by<b[x].bullety + 5 && B[i].by + 30>b[x].bullety) { // condition to detect if every balloon is hit or not
 							B[i].hit = true;
-							totalScored = totalScored + 10;
 						}
 					}
 					b[x].draw();
