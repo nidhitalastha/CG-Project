@@ -1,5 +1,5 @@
 # 2D-SHOOTER-GAME
-A game built usig legacy opengl and c++
+A game built using legacy opengl and c++
 
 ## Getting started
 Clone the repository
