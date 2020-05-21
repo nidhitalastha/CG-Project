@@ -6,4 +6,4 @@ Clone the repository
 ```bash
 git clone https://github.com/nidhitalastha/CG-Project.git .
 ```
-Open the included visual studio sln and run the program
+Open the included visual studio sln and run the program with x86 configuration
