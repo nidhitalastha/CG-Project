@@ -1,2 +1,2 @@
 # CG
-a mini progect using opengl and c++
+a mini progect using legacy opengl and c++
